@@ -1,0 +1,63 @@
+/*Подключаем стандартные библиотеки для работы*/
+
+#include <iostream>
+
+#include <cstdlib>
+
+ 
+
+// Описываем конвертацию дюймов "in" в метры.
+
+double in2m(double in) { return 0.0254 * in; }
+
+ 
+
+// Описываем конвертацию футов "ft" в метры.
+
+double ft2m(double ft) { return 0.304 * ft; }
+
+ 
+
+// Описываем конвертацию метров "m" в дюймы.
+
+double m2in(double m) { return m / 0.0254; }
+
+ 
+
+// Описываем конвертацию метров "m" в футы.
+
+double m2ft(double m) { return m / 0.304; }
+
+ 
+
+int main()
+
+{
+
+  using namespace std;
+
+  cout << "Введите число: "; //принимаем числовое значение 
+
+  double len = 0.0;
+
+  cin >> len;
+
+ 
+
+  //выводим результаты вычисления на экран
+
+  cout << "Дюймы в метры = " << in2m(len) << endl;
+
+  cout << "Футы в метры = " << ft2m(len) << endl;
+
+  cout << "Метры в дюймы = " << m2in(len) << endl;
+
+  cout << "Метры в футы = " << m2ft(len) << endl;
+
+  cout << "Дюймы в футы = " << m2ft(in2m(len)) << endl;
+
+  cout << "Футы в дюймы = " << m2in(ft2m(len)) << endl;
+
+  return 0;
+
+}
